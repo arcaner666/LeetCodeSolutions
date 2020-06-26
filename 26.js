@@ -20,3 +20,11 @@ It doesn't matter what values are set beyond the returned length.
 */
 
 // Solution 26
+var dizi = [1,1,2,3,3,3,4,4,5];
+function tekrarEdenleriSil(dizi) {
+    for(var i = dizi.length - 1; i > 0; i--){
+        if(dizi[i]===dizi[i - 1]) dizi.splice(i, 1)
+    }
+    return dizi.length
+};
+console.log(tekrarEdenleriSil(dizi));
