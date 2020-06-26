@@ -16,3 +16,15 @@ Output: 4
 */
 
 // Solution 136
+var dizi = [7, 7, 5, 3, 3, 1, 1];
+function tekrarEtmeyenSayiyiBul(dizi) {
+    const hafiza = {};
+    for (n of dizi) {
+        if (hafiza[n] == null) hafiza[n] = 0;
+        hafiza[n]++;
+    }
+    for (n in hafiza) {
+        if (hafiza[n] === 1) return Number(n);
+    }
+}
+console.log(tekrarEtmeyenSayiyiBul(dizi));
