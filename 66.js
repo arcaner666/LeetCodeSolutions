@@ -18,3 +18,13 @@ Explanation: The array represents the integer 4321.
 */
 
 // Solution 66
+var dizi = [3, 5, 6, 4, 9];
+function birEkle(dizi) {
+  for(var i = dizi.length - 1; i >= 0; i--){
+    if(++dizi[i] > 9) dizi[i] = 0;
+    else return dizi;
+  }
+  dizi.unshift(1);
+  return dizi;
+};
+console.log(birEkle(dizi));
